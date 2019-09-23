@@ -1,0 +1,27 @@
+{
+  "name": "@xura/feed",
+  "version": "0.0.1",
+  "description": "Main news feed",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xura/feed.git"
+  },
+  "author": "Joe Badaczewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xura/feed/issues"
+  },
+  "homepage": "https://github.com/xura/feed#readme",
+  "dependencies": {
+    "@teamthread/elm-web-components": "^1.0.0",
+    "elm-webpack-loader": "^6.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
