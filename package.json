@@ -18,7 +18,8 @@
   "homepage": "https://github.com/xura/feed#readme",
   "dependencies": {
     "@teamthread/elm-web-components": "^1.0.0",
-    "elm-webpack-loader": "^6.0.0"
+    "elm-webpack-loader": "^6.0.0",
+    "@xura/emporium": "git+https://git@github.com/xura/emporium.git"
   },
   "devDependencies": {
     "webpack": "^4.40.2",
