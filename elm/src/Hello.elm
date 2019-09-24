@@ -1,28 +1,61 @@
-  
--- This is how you write single-line comments in Elm.
-{-
-   This is how you
-   write multi-line comments
-   in Elm.
--}
--- This is how you declare what your module name is and what values it exports.
--- We've chosen to name our module Main and we are exporting the value main that
--- we have defined below.
+port module PortExamples exposing (main)
+
+import Browser
+import Html exposing (..)
+import Html.Events exposing (onClick)
 
 
-module Main exposing (main)
-
--- We're importing the Html module the text value available in our file, so we
--- can just reference it if we want.
-
-import Html exposing (text)
+type alias Model =
+    String
 
 
+view : Model -> Html Msg
+view model =
+    div []
+        [ button [ onClick SendDataToJS ]
+            [ text "Send Data to JavaScript" ]
+        , br [] []
+        , br [] []
+        , text ("Data received from JavaScript: " ++ model)
+        ]
 
--- The main value manages what gets displayed on the page. If we set the main
--- value to (text "Hello, World!"), then a text node with the string "Hello, World!"
--- will display on the page.
+
+type Msg
+    = SendDataToJS
+    | ReceivedDataFromJS Model
 
 
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        SendDataToJS ->
+            ( model, sendData "Hello JavaScript!" )
+
+        ReceivedDataFromJS data ->
+            ( data, Cmd.none )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions _ =
+    receiveData ReceivedDataFromJS
+
+
+port sendData : String -> Cmd msg
+
+
+port receiveData : (Model -> msg) -> Sub msg
+
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( "", Cmd.none )
+
+
+main : Program () Model Msg
 main =
-    text "Hello, World!"
+    Browser.element
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
