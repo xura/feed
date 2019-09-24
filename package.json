@@ -2,7 +2,7 @@
   "name": "@xura/feed",
   "version": "0.0.1",
   "description": "Main news feed",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js"
   },
