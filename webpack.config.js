@@ -18,8 +18,5 @@ module.exports = {
                 }
             }
         }]
-    },
-    plugins: [
-        new webpack.IgnorePlugin(/@xura\/emporium/)
-    ]
+    }
 };
