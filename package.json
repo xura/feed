@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/xura/feed#readme",
   "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@teamthread/elm-web-components": "^1.0.0",
     "elm-webpack-loader": "^6.0.0"
   },
