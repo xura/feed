@@ -16,7 +16,7 @@ view model =
             [ text "Send Data to JavaScript" ]
         , br [] []
         , br [] []
-        , text ("Data received frefwefom JavaefewfScript: " ++ model)
+        , text ("Data 1 1 JavaefewfScript: " ++ model)
         ]
 
 
