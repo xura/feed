@@ -1,5 +1,5 @@
 import singleSpaHtml from 'single-spa-html';
-import './index';
+import '../src';
 import emporium from '@xura/emporium';
 
 window.add = function () {

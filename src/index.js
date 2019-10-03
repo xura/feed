@@ -1,5 +1,5 @@
 import elmWebComponents from '@teamthread/elm-web-components';
-import Feed from './src/elm/src/Hello.elm';
+import Feed from './elm/src/Hello.elm';
 import emporium from '@xura/emporium';
 
 elmWebComponents.configure('0.19');

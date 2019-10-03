@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xura | Feed</title>
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@xura/emporium": "http://localhost:8237/dist/main.js",
+        "@xura/feed": "http://localhost:9000/feed.js"
+      }
+    }
+  </script>
+
+    <script src='https://unpkg.com/systemjs@4.1.0/dist/system.js'></script>
+    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/amd.js'></script>
+    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/named-exports.js'></script>
+    <script src='https://unpkg.com/systemjs@4.1.0/dist/extras/use-default.js'></script>
+
+    <script>
+        System.import('@xura/feed')
+    </script>
+</head>
+
+<body>
+<feed-div></feed-div>
+</body>
+</html>
