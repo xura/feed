@@ -53,7 +53,7 @@ module.exports = {
     ],
     devtool: 'source-map',
     externals: [
-        /^@xura\/emporium$/,
+        /^@xura\/data$/,
         /^single-spa$/
     ],
 };
