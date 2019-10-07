@@ -1,5 +1,5 @@
 import singleSpaHtml from 'single-spa-html';
-import './index';
+import '../src/index';
 
 const htmlLifecycles = singleSpaHtml({
     template: '<feed-div></feed-div>',
