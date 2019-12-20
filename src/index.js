@@ -10,7 +10,7 @@ import { connect, data, connection } from '@xura/data';
             data.achievements.stream()
                 .then(stream => stream.subscribe(achievement => {
                     debugger;
-                    ports.receiveData.send(achievement.name);
+                    ports.receiveData.send(achievement.name.toString());
                 }));
         },
     });
