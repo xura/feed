@@ -9,7 +9,6 @@ import { connect, data, connection } from '@xura/data';
         setupPorts: ports => {
             data.achievements.stream()
                 .then(stream => stream.subscribe(achievement => {
-                    debugger;
                     ports.receiveData.send(achievement.name.toString());
                 }));
         },
