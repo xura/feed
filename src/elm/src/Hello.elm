@@ -13,7 +13,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ button [ onClick SendDataToJS ]
-            [ text "Send Data to JavaScript" ]
+            [ text "Send Dataqwdqwd to JavaScript" ]
         , br [] []
         , br [] []
         , text ("Data 1 1 sddsf: " ++ model)
